@@ -1,13 +1,236 @@
-<link rel="icon" type="image/png" href="http://www.mvdwg.xyz/favico.png">
-<style>
-a {
-  border: none;
-}
-img {
-  margin: auto;
-  display: block;
-  width: 90%;
-  height: 90%;
-}
-</style>
-<a href="https://github.com/mvdwg"><img src="elephant.svg" alt="MVDWG"></a>
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <link rel="icon" type="image/png" href="http://www.mvdwg.xyz/favico.png">
+  <title>MVDWG</title>
+  <style>
+  html, body {
+    font-size: 18px;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: rgb(98,98,109);
+    height: 100%;
+  }
+
+  a,
+  a:link,
+  a:visited,
+  a:active,
+  a:hover {
+    border: none;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .header {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100px;
+    opacity: 1;
+    transition: opacity 1s, background-color 1s;
+    background-color: rgb(235,100,123);
+    overflow: hidden;
+  }
+
+  .header--logo {
+    flex: 0 1 auto;
+    width: 120px;
+    vertical-align: middle;
+    padding-bottom: 10px;
+    display: none;
+    align-self: center;
+  }
+
+  .header--title {
+    margin: 0;
+    padding: 0;
+    font-family: Impact;
+    font-size: 8rem;
+    line-height: 1;
+    letter-spacing: -4px;
+    color: rgb(255,255,255);
+    align-self: center;
+  }
+
+  @media (min-width: 700px) {
+    .header {
+      justify-content: flex-start;
+      padding: 0 20px;
+      height: 140px;
+    }
+
+    .header--title {
+      flex: 0 1 auto;
+      font-size: 11rem;
+      margin-left: 2rem;
+    }
+
+    .header--logo {
+      display: block;
+    }
+
+    .animated-welcome {
+      background-color: rgb(235,100,123);
+    }
+
+    .animated-welcome .section--items {
+      opacity: 0;
+    }
+
+    .animated-welcome .header{
+    }
+
+    .animated-welcome .header--title {
+      opacity: 0;
+    }
+
+    .animated-welcome .header--logo {
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      top: 10px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      animation-name: logo-resize;
+      animation-duration: 1000ms;
+      animation-timing-function: ease-in;
+      animation-fill-mode: both;
+      animation-delay: 200ms;
+    }
+
+    @keyframes logo-resize {
+      100% {
+        height: 120px;
+      }
+    }
+  }
+
+  .section {
+    padding: 5px 20px;
+  }
+
+  .section--items {
+    opacity: 1;
+    transition: opacity .5s;
+
+    display: flex;
+    flex-flow: column;
+    color: rgb(0,0,0);
+    background-color: white;
+  }
+
+  .section--title {
+    color: rgb(235,100,123);
+  }
+
+  .project {
+    box-sizing: border-box;
+    padding: 10px 5px;
+    margin: 20px;
+    align-content: flex-start;
+    align-items: flex-start;
+
+    color: rgb(235,100,123);
+  }
+
+  .project--title {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    color: black;
+  }
+
+  .project--cover {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: 50% 0;
+  }
+
+  @media (min-width: 700px) {
+    .section--items {
+      flex-flow: row;
+    }
+  }
+
+  @media (min-width: 1279px) {
+    .project {
+      width: 620px;
+    }
+  }
+  </style>
+</head>
+<body>
+  <script>
+  function welcome() {
+    if (sessionStorage.getItem('mvdwg-animated-welcome')) {
+      return;
+    }
+
+    sessionStorage.setItem('mvdwg-animated-welcome', true);
+
+    if (document.body.classList) {
+      document.body.classList.add('animated-welcome');
+
+      setTimeout(function() {
+        document.body.classList.remove('animated-welcome');
+      }, 2000);
+    }
+  }
+
+  try {
+    welcome();
+  } catch(e) {}
+  </script>
+  <header class="header">
+    <a href="https://github.com/mvdwg" class="header--logo">
+      <img src="elephant.svg" alt="MVDWG">
+    </a>
+    <h1 class="header--title" title="Montevideo Working Group">
+      MVWG
+    </h1>
+  </header>
+  <section class="section">
+    <h2 class="section--title">Projects</h2>
+    <div class="section--items">
+      <article class="project">
+        <h3 class="project--title">
+          <a href="https://github.com/mvdwg/telling-stories">
+            <img class="project--cover" src="telling-stories.png">
+            telling-stories
+          </a>
+        </h3>
+        <p class="project--desc">
+          Review and document the features of your Ember application in an easy and fun way!
+        </p>
+      </article>
+      <article class="project">
+        <h3 class="project--title">
+          <a href="https://github.com/mvdwg/flip-the-tomster">
+            <img class="project--cover" src="flip-the-tomster.png">
+            flip-the-tomster
+          </a>
+        </h3>
+        <p class="project--desc">
+          Flip cards game featuring Tomster's 100 different faces. A small Ember.js game written originally for the Ember Montevideo Meetup.
+        </p>
+      </article>
+    </div>
+  </section>
+</body>
+</html>
