@@ -18,11 +18,6 @@ a:hover {
   text-decoration: none;
 }
 
-img {
-  width: 100%;
-  height: 100%;
-}
-
 .header {
   box-sizing: border-box;
   display: flex;
@@ -139,6 +134,8 @@ img {
   align-content: flex-start;
   align-items: flex-start;
   background: rgba(235,100,123,.1);
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .project--heading {
@@ -282,4 +279,55 @@ img {
 
 .author--avatar__jubar {
   background-image: url("https://www.gravatar.com/avatar/51aaaebc5b833211facbe04fbd3a7a5c.jpg?s=100");
+}
+
+.member {
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 116, 217, 1);
+  margin: 20px 0;
+  align-content: flex-start;
+  align-items: flex-start;
+  text-align: center;
+  background-color: rgba(0, 116, 217, .1);
+  border-radius: 15px;
+}
+
+.member a,
+.member a:visited {
+  color: #0074D9;
+  border-bottom: 1px dotted;
+}
+
+.member a:hover {
+  color: #7FDBFF;
+}
+
+.member a:active {
+  color: #0074D9;
+}
+
+.member--avatar {
+  width: 150px;
+  border-radius: 75px;
+  border: 1px solid #0074D9;
+}
+
+.member--urls {
+  margin: 0;
+}
+
+.member--url {
+  list-style-type: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .section--items {
+    flex-flow: row wrap;
+  }
+
+  .member {
+    flex: 0 0 1;
+    width: 365px;
+    margin: 10px;
+  }
 }
