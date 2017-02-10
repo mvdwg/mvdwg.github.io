@@ -3,200 +3,10 @@
 <head>
   <link rel="icon" type="image/png" href="http://www.mvdwg.xyz/favico.png">
   <title>MVDWG</title>
-  <style>
-  html, body {
-    font-size: 18px;
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    color: rgb(98,98,109);
-    height: 100%;
-  }
-
-  a,
-  a:link,
-  a:visited,
-  a:active,
-  a:hover {
-    border: none;
-    color: inherit;
-    text-decoration: none;
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .header {
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: flex-end;
-    width: 100%;
-    height: 100px;
-    opacity: 1;
-    transition: opacity 1s, background-color 1s;
-    background-color: rgb(235,100,123);
-    overflow: hidden;
-  }
-
-  .header--logo {
-    flex: 0 1 auto;
-    width: 120px;
-    vertical-align: middle;
-    padding-bottom: 10px;
-    display: none;
-    align-self: center;
-  }
-
-  .header--title {
-    margin: 0;
-    padding: 0;
-    font-family: Impact, Charcoal, sans-serif;
-    font-size: 8rem;
-    line-height: 1;
-    letter-spacing: -4px;
-    color: rgb(255,255,255);
-    align-self: center;
-  }
-
-  @media only screen and (min-width: 768px) {
-    .header {
-      justify-content: flex-start;
-      padding: 0 20px;
-      height: 140px;
-    }
-
-    .header--title {
-      flex: 0 1 auto;
-      font-size: 11rem;
-      margin-left: 2rem;
-    }
-
-    .header--logo {
-      display: block;
-    }
-
-    .animated-welcome {
-      background-color: rgb(235,100,123);
-    }
-
-    .animated-welcome .section--items {
-      opacity: 0;
-    }
-
-    .animated-welcome .header{
-    }
-
-    .animated-welcome .header--title {
-      opacity: 0;
-    }
-
-    .animated-welcome .header--logo {
-      position: absolute;
-      height: 100vh;
-      width: 100%;
-      top: 10px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-
-      animation-name: logo-resize;
-      animation-duration: 1000ms;
-      animation-timing-function: ease-in;
-      animation-fill-mode: both;
-      animation-delay: 200ms;
-    }
-
-    @keyframes logo-resize {
-      100% {
-        height: 120px;
-      }
-    }
-  }
-
-  .section {
-    padding: 5px 20px;
-  }
-
-  .section--items {
-    opacity: 1;
-    transition: opacity .5s;
-
-    display: flex;
-    flex-flow: column;
-    color: rgb(0,0,0);
-    background-color: white;
-  }
-
-  .section--title {
-    color: rgb(235,100,123);
-  }
-
-  .project {
-    box-sizing: border-box;
-    padding: 10px 5px;
-    margin: 20px;
-    align-content: flex-start;
-    align-items: flex-start;
-
-    color: rgb(235,100,123);
-  }
-
-  .project--title {
-    margin: 0;
-    padding: 0;
-    font-family: monospace;
-    color: black;
-  }
-
-  .project--cover {
-    border: 1px solid transparent;
-    border-radius: 5px;
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    object-position: 50% 0;
-  }
-
-  @media only screen and (min-width: 768px) {
-    .section--items {
-      flex-flow: row;
-    }
-  }
-
-  @media only screen and (min-width: 1279px) {
-    .project {
-      width: 620px;
-    }
-  }
-  </style>
+  <link href="styles/app.css" rel="stylesheet" media="screen, projection">
 </head>
 <body>
-  <script>
-  function welcome() {
-    if (sessionStorage.getItem('mvdwg-animated-welcome')) {
-      return;
-    }
-
-    sessionStorage.setItem('mvdwg-animated-welcome', true);
-
-    if (document.body.classList) {
-      document.body.classList.add('animated-welcome');
-
-      setTimeout(function() {
-        document.body.classList.remove('animated-welcome');
-      }, 2000);
-    }
-  }
-
-  try {
-    welcome();
-  } catch(e) {}
-  </script>
+  <script src="javascript/welcome.js"></script>
   <header class="header">
     <a href="https://github.com/mvdwg" class="header--logo">
       <img src="elephant.svg" alt="MVDWG">
@@ -211,24 +21,77 @@
       <article class="project">
         <h3 class="project--title">
           <a href="https://github.com/mvdwg/telling-stories">
-            <img class="project--cover" src="telling-stories.png">
+            <img class="project--cover" src="images/telling-stories.png">
             telling-stories
           </a>
         </h3>
         <p class="project--desc">
           Review and document the features of your Ember application in an easy and fun way!
         </p>
+        <p class="project--authors">
+
+          <a class="author" rel="noopener" target="_blank" href="https://twitter.com/san650">
+            <span class="author--avatar--outer">
+              <span class="author--avatar author--avatar__san650"></span>
+            </span>
+            <span class="author--name">
+              <span class="author--pointer"></span>
+              Santiago Ferreira
+            </span>
+          </a>
+
+          <a class="author" rel="noopener" target="_blank" href="https://github.com/marpo60">
+            <span class="author--avatar--outer">
+              <span class="author--avatar author--avatar__marpo60"></span>
+            </span>
+            <span class="author--name">
+              <span class="author--pointer"></span>
+              Marcelo Dominguez
+            </span>
+          </a>
+
+          <a class="author" rel="noopener" target="_blank" href="https://github.com/juanazam">
+            <span class="author--avatar--outer">
+              <span class="author--avatar author--avatar__juanazam"></span>
+            </span>
+            <span class="author--name">
+              <span class="author--pointer"></span>
+              Juan Azambuja
+            </span>
+          </a>
+
+          <a class="author" rel="noopener" target="_blank" href="https://github.com/hidnasio">
+            <span class="author--avatar--outer">
+              <span class="author--avatar author--avatar__hidnasio"></span>
+            </span>
+            <span class="author--name">
+              <span class="author--pointer"></span>
+              Luis Ferreira
+            </span>
+          </a>
+
+          <a class="author" rel="noopener" target="_blank" href="https://github.com/jubar">
+            <span class="author--avatar--outer">
+              <span class="author--avatar author--avatar__jubar"></span>
+            </span>
+            <span class="author--name">
+              <span class="author--pointer"></span>
+              Julio Barrios
+            </span>
+          </a>
+        </p>
       </article>
       <article class="project">
         <h3 class="project--title">
           <a href="https://github.com/mvdwg/flip-the-tomster">
-            <img class="project--cover" src="flip-the-tomster.png">
+            <img class="project--cover" src="images/flip-the-tomster.png">
             flip-the-tomster
           </a>
         </h3>
         <p class="project--desc">
           Flip cards game featuring Tomster's 100 different faces. A small Ember.js game written originally for the Ember Montevideo Meetup.
         </p>
+        <p class="project--authors"></p>
       </article>
     </div>
   </section>

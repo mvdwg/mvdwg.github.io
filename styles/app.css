@@ -1,0 +1,252 @@
+html, body {
+  font-size: 18px;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: rgb(98,98,109);
+  height: 100%;
+}
+
+a,
+a:link,
+a:visited,
+a:active,
+a:hover {
+  border: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 100px;
+  opacity: 1;
+  transition: opacity 1s, background-color 1s;
+  background-color: rgb(235,100,123);
+  overflow: hidden;
+}
+
+.header--logo {
+  flex: 0 1 auto;
+  width: 120px;
+  vertical-align: middle;
+  padding-bottom: 10px;
+  display: none;
+  align-self: center;
+}
+
+.header--title {
+  margin: 0;
+  padding: 0;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 8rem;
+  line-height: 1;
+  letter-spacing: -4px;
+  color: rgb(255,255,255);
+  align-self: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    justify-content: flex-start;
+    padding: 0 20px;
+    height: 140px;
+  }
+
+  .header--title {
+    flex: 0 1 auto;
+    font-size: 11rem;
+    margin-left: 2rem;
+  }
+
+  .header--logo {
+    display: block;
+  }
+
+  .animated-welcome {
+    background-color: rgb(235,100,123);
+  }
+
+  .animated-welcome .section--items {
+    opacity: 0;
+  }
+
+  .animated-welcome .header{
+  }
+
+  .animated-welcome .header--title {
+    opacity: 0;
+  }
+
+  .animated-welcome .header--logo {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    animation-name: logo-resize;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+    animation-delay: 200ms;
+  }
+
+  @keyframes logo-resize {
+    100% {
+      height: 120px;
+    }
+  }
+}
+
+.section {
+  padding: 5px 20px;
+}
+
+.section--items {
+  opacity: 1;
+  transition: opacity .5s;
+
+  display: flex;
+  flex-flow: column;
+  color: rgb(0,0,0);
+  background-color: white;
+}
+
+.section--title {
+  color: rgb(235,100,123);
+}
+
+.project {
+  box-sizing: border-box;
+  padding: 10px 5px;
+  margin: 20px;
+  align-content: flex-start;
+  align-items: flex-start;
+
+  color: rgb(235,100,123);
+}
+
+.project--title {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  color: black;
+}
+
+.project--cover {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: 50% 0;
+}
+
+.project--authors {
+}
+
+@media only screen and (min-width: 768px) {
+  .section--items {
+    flex-flow: row;
+  }
+}
+
+@media only screen and (min-width: 1279px) {
+  .project {
+    width: 620px;
+  }
+}
+
+.author {
+  position: relative;
+  display: inline-block;
+  opacity: .6;
+}
+
+.author:hover {
+  opacity: 1;
+}
+
+.author--name {
+  position: absolute;
+  left: -45px;
+  bottom: -30px;
+  padding: 3px 5px;
+  z-index: 1;
+
+  display: none;
+  color: white;
+  background: black;
+  font-size: 75%;
+  width: 130px;
+  text-align: center;
+  text-rendering: optimizeSpeed;
+  border-radius: 3px;
+}
+
+.author:hover .author--name {
+  display: block;
+}
+
+.author--pointer {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid black;
+  top: -5px;
+  left: 63px;
+}
+
+.author--avatar {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: transparent none 70% 30% no-repeat scroll;
+  background-size: 60px;
+  border-radius: 20px;
+  border: 1px solid white;
+}
+
+.author--avatar--outer {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  border-radius: 22px;
+  border: 1px solid rgba(0,0,0,.3);
+}
+
+.author--avatar__san650 {
+  background-image: url("https://www.gravatar.com/avatar/7f2b539e2b52664f3031198809743bf0.jpg?s=100");
+}
+
+.author--avatar__marpo60 {
+  background-image: url("https://www.gravatar.com/avatar/a041d11e6ae29a903109829e519a8e8d.jpg?s=100");
+}
+
+.author--avatar__juanazam {
+  background-image: url("https://www.gravatar.com/avatar/c4be5195b191b323ffae6a20d69442fb.jpg?s=100");
+}
+
+.author--avatar__hidnasio {
+  background-image: url("https://www.gravatar.com/avatar/ce547b51631b049bb46df98972cf79d0.jpg?s=100");
+}
+
+.author--avatar__jubar {
+  background-image: url("https://www.gravatar.com/avatar/51aaaebc5b833211facbe04fbd3a7a5c.jpg?s=100");
+}
