@@ -116,59 +116,92 @@ img {
   padding: 5px 20px;
 }
 
+.section--title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .section--items {
   opacity: 1;
   transition: opacity .5s;
 
   display: flex;
   flex-flow: column;
+  flex-wrap: wrap;
   color: rgb(0,0,0);
   background-color: white;
 }
 
-.section--title {
-  color: rgb(235,100,123);
-}
-
 .project {
   box-sizing: border-box;
-  padding: 10px 5px;
-  margin: 20px;
+  border: 1px solid rgb(235,100,123);
+  margin: 20px 0;
   align-content: flex-start;
   align-items: flex-start;
-
-  color: rgb(235,100,123);
+  background: rgba(235,100,123,.1);
 }
 
-.project--title {
+.project--heading {
   margin: 0;
   padding: 0;
-  font-family: monospace;
   color: black;
+  position: relative;
 }
 
 .project--cover {
-  border: 1px solid transparent;
-  border-radius: 5px;
   width: 100%;
   height: 200px;
   object-fit: cover;
   object-position: 50% 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+}
+
+.project--title {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  background-color: rgb(235,100,123);
+  font-family: monaco, monospace;
+  color: white;
+}
+
+.project--desc {
+  padding: 10px 20px;
+}
+
+.project--desc a,
+.project--desc a:visited {
+  color: #0074D9;
+  border-bottom: 1px dotted;
+}
+
+.project--desc a:hover {
+  color: #7FDBFF;
+}
+
+.project--desc a:active {
+  color: #0074D9;
 }
 
 .project--authors {
+  padding: 0 20px;
 }
 
 @media only screen and (min-width: 768px) {
   .section--items {
-    flex-flow: row;
+    flex-flow: row wrap;
+  }
+
+  .project {
+    flex: 0 0 1;
+    width: 365px;
+    margin: 10px;
   }
 }
 
 @media only screen and (min-width: 1279px) {
-  .project {
-    width: 620px;
-  }
 }
 
 .author {
