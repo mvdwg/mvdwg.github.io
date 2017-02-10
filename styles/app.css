@@ -197,7 +197,8 @@ a:hover {
 }
 
 .project--desc {
-  padding: 10px 20px;
+  padding: 0 20px;
+  margin: 0;
 }
 
 .project--desc a,
@@ -216,6 +217,51 @@ a:hover {
 
 .project--authors {
   padding: 0 20px;
+  margin-bottom: 5px;
+}
+
+.project-techs {
+  text-align: right;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.tech {
+  background: white 50% 50% no-repeat scroll;
+  background-size: 25px;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,.2);
+}
+
+.tech__js {
+  background-image: url("../images/tech-js.jpg");
+}
+
+.tech__ember {
+  background-image: url("../images/tech-ember.png");
+}
+
+.tech__html5 {
+  background-image: url("../images/tech-html5.png");
+}
+
+.tech__css3 {
+  background-image: url("../images/tech-css3.png");
+}
+
+.tech__ruby {
+  background-image: url("../images/tech-ruby.png");
+}
+
+.tech__node {
+  background-image: url("../images/tech-node.png");
+}
+
+.tech__bash {
+  background-image: url("../images/tech-bash.png");
 }
 
 @media only screen and (min-width: 768px) {
