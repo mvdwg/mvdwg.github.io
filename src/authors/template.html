@@ -1,15 +1,13 @@
-m4_define(CSSCLASS, `author--avatar author--avatar__'GITHUB)m4_dnl
 m4_define(GIT, `http://github.com/'GITHUB)m4_dnl
 <a class="author" rel="noopener" target="_blank" href="GIT">
   <span class="author--avatar--outer">
-    <span class="CSSCLASS"></span>
+    <span class="author--avatar author--avatar__`'GITHUB"></span>
   </span>
   <span class="author--name">
     <span class="author--pointer"></span>
     NAME
   </span>
 </a>
-m4_undefine(`CSSCLASS')m4_dnl
 m4_undefine(`GIT')m4_dnl
 m4_undefine(`NAME')m4_dnl
 m4_undefine(`GITHUB')m4_dnl
