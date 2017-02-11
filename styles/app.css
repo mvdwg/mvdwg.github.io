@@ -181,7 +181,7 @@ a:hover {
   align-content: flex-start;
   align-items: flex-start;
   background: rgba(235,100,123,.1);
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 .project--heading {
@@ -206,7 +206,7 @@ a:hover {
   background-color: rgb(235,100,123);
   font-family: monaco, monospace;
   color: white;
-  border-radius: 14px 14px 0 0;
+  border-radius: 4px 4px 0 0;
 }
 
 .project--desc {
