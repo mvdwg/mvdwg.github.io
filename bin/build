@@ -4,7 +4,11 @@ function step() {
   echo "* $1"
 }
 
+function uglify() {
+  tr -ds "\n" " " | sed 's/> </></g'
+}
+
 step "Generating index.html file"
-m4 --prefix-builtins --include=src src/index.html > "./index.html"
+m4 --prefix-builtins --include=src src/index.html | uglify > "./index.html"
 
 echo "Done."
