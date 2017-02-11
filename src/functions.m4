@@ -7,3 +7,5 @@ m4_undefine(`GIT')m4_dnl
 m4_undefine(`NAME')m4_dnl
 m4_undefine(`GITHUB')m4_dnl
 ')m4_dnl
+m4_define(`include_author',`m4_include(authors/$1.html)')m4_dnl
+m4_define(`include_project',`m4_include(projects/$1.html)')m4_dnl
