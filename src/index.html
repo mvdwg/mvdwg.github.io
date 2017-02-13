@@ -1,4 +1,3 @@
-m4_include(functions.m4)m4_dnl
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -8,6 +7,7 @@ m4_include(functions.m4)m4_dnl
   <link href="styles/app.css" rel="stylesheet" media="screen, projection">
 </head>
 <body>
+  m4_include(functions.m4)
   <script src="javascript/welcome.js"></script>
   <header class="header">
     <a href="https://github.com/mvdwg" class="header--logo">
@@ -28,96 +28,17 @@ m4_include(functions.m4)m4_dnl
   </section>
   <section class="section">
     <h2 class="section--title"><a name="projects">Projects</a></h2>
-    <div class="section--items">
-
-      <article class="project">
-        m4_include(projects/telling-stories.html)
-        <p class="project--authors">
-          m4_include(authors/san650.html)
-          m4_include(authors/hidnasio.html)
-          m4_include(authors/jubar.html)
-          m4_include(authors/marpo60.html)
-          m4_include(authors/juanazam.html)
-        </p>
-      </article>
-
-      <article class="project">
-        m4_include(projects/flip-the-tomster.html)
-        <p class="project--authors">
-          m4_include(authors/hidnasio.html)
-          m4_include(authors/san650.html)
-          m4_include(authors/jubar.html)
-          m4_include(authors/marpo60.html)
-          m4_include(authors/juanazam.html)
-        </p>
-      </article>
-
-      <article class="project">
-        m4_include(projects/ember-cli-page-object.html)
-        <p class="project--authors">
-          m4_include(authors/san650.html)
-          m4_include(authors/juanazam.html)
-          m4_include(authors/hidnasio.html)
-          m4_include(authors/jubar.html)
-          m4_include(authors/marpo60.html)
-        </p>
-      </article>
-
-      <article class="project">
-        m4_include(projects/ember-web-app.html)
-        <p class="project--authors">
-          m4_include(authors/san650.html)
-          m4_include(authors/hidnasio.html)
-        </p>
-      </article>
-
-      <article class="project">
-        m4_include(projects/move-the-boxes.html)
-        <p class="project--authors">
-          m4_include(authors/san650.html)
-          m4_include(authors/hidnasio.html)
-          m4_include(authors/jubar.html)
-        </p>
-      </article>
-
-      <article class="project">
-        m4_include(projects/ember-addons-inspector.html)
-        <p class="project--authors">
-          m4_include(authors/san650.html)
-        </p>
-      </article>
-
-      <article class="project">
-        m4_include(projects/git-switch.html)
-        <p class="project--authors">
-          m4_include(authors/marpo60.html)
-          m4_include(authors/san650.html)
-        </p>
-      </article>
-
-      <article class="project">
-        m4_include(projects/workspaces.html)
-        <p class="project--authors">
-          m4_include(authors/marpo60.html)
-          m4_include(authors/san650.html)
-        </p>
-      </article>
-
-      <article class="project">
-        m4_include(projects/ceibo.html)
-        <p class="project--authors">
-          m4_include(authors/san650.html)
-        </p>
-      </article>
-
-      <article class="project">
-        m4_include(projects/tajpado.html)
-        <p class="project--authors">
-          m4_include(authors/san650.html)
-          m4_include(authors/jubar.html)
-          m4_include(authors/hidnasio.html)
-        </p>
-      </article>
+    <div class="section--items section--items__center">
+      project_partial(telling-stories, san650, hidnasio, jubar, marpo60, juanazam)
+      project_partial(flip-the-tomster, hidnasio, san650, jubar, marpo60, juanazam)
+      project_partial(ember-cli-page-object, san650, juanazam, hidnasio, jubar, marpo60)
+      project_partial(ember-web-app, san650, hidnasio)
+      project_partial(move-the-boxes, san650, hidnasio, jubar)
+      project_partial(ember-addons-inspector, san650)
+      project_partial(git-switch, marpo60, san650)
+      project_partial(workspaces, marpo60, san650)
+      project_partial(ceibo, san650)
+      project_partial(tajpado, san650, jubar, hidnasio)
     </div>
   </section>
 

@@ -133,6 +133,10 @@ a:hover {
   background-color: white;
 }
 
+.section--items__center {
+  justify-content: space-around;
+}
+
 .intro {
   color: #111111;
   max-width: 800px;
