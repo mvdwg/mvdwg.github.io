@@ -17,3 +17,7 @@ m4_define(`project_partial', `
   m4_define(`AUTHORS', `m4_undivert(`1')')
   m4_include(projects/$1.html)
 ')
+
+m4_define(`raw_partial', `
+  m4_undivert($1)
+')
