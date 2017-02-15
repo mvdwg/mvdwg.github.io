@@ -120,6 +120,11 @@ a:hover {
 .section--title {
   text-align: center;
   text-transform: uppercase;
+  font-weight: 100;
+  color: #071013;
+  font-size: 200%;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  padding-bottom: 30px;
 }
 
 .section--items {
@@ -180,11 +185,11 @@ a:hover {
 
 .project {
   box-sizing: border-box;
-  border: 1px solid rgb(235,100,123);
+  border: 1px solid #102542;
   margin: 20px 0;
   align-content: flex-start;
   align-items: flex-start;
-  background: rgba(235,100,123,.1);
+  background: rgba(205, 215, 214, .3);
   border-radius: 5px;
 }
 
@@ -199,7 +204,7 @@ a:hover {
   object-fit: cover;
   object-position: 50% 0;
   box-sizing: border-box;
-  border-bottom: 1px solid rgba(0,0,0,.2);
+  border: 3px solid white;
 }
 
 .project--title {
@@ -207,7 +212,7 @@ a:hover {
   width: 100%;
   box-sizing: border-box;
   padding: 10px 20px;
-  background-color: rgb(235,100,123);
+  background-color: #102542;
   font-family: monaco, monospace;
   color: white;
   border-radius: 4px 4px 0 0;
@@ -293,17 +298,10 @@ a:hover {
   }
 }
 
-@media only screen and (min-width: 1279px) {
-}
-
 .author {
   position: relative;
   display: inline-block;
-  opacity: .6;
-}
-
-.author:hover {
-  opacity: 1;
+  margin-right: 3px;
 }
 
 .author--name {
@@ -345,15 +343,13 @@ a:hover {
   background: transparent none 70% 30% no-repeat scroll;
   background-size: 60px;
   border-radius: 20px;
-  border: 1px solid white;
+  border: 1px solid rgba(0,0,0,.1);
 }
 
 .author--avatar--outer {
   display: inline-block;
   width: 42px;
   height: 42px;
-  border-radius: 22px;
-  border: 1px solid rgba(0,0,0,.3);
 }
 
 .author--avatar__san650 {
