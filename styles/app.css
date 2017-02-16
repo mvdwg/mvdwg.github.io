@@ -218,6 +218,12 @@ a:hover {
   border-radius: 4px 4px 0 0;
 }
 
+.project--stars {
+  float: left;
+  width: 150px;
+  margin-top: 8px;
+}
+
 .project--desc {
   padding: 0 20px;
   margin: 0;
