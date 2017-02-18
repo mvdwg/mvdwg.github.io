@@ -1,6 +1,6 @@
 # mvdwg.org
 
-Development files for website http://www.mvdwg.org/
+Development files for website https://www.mvdwg.org/
 
 ## Development
 
