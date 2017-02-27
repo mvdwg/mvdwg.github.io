@@ -10,11 +10,13 @@ To build the website
 $ ./bin/build
 ```
 
-To see the website locally
+And to see the site in development (with SSL)
 
 ```sh
-$ python -m SimpleHTTPServer
+$ ./bin/server
 ```
+
+then visit https://localhost:3000/
 
 ## License
 
