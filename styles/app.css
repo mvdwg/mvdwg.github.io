@@ -272,6 +272,10 @@ a:hover {
   background-image: url("../images/tech-ember.png");
 }
 
+.tech__glimmer {
+  background-image: url("../images/tech-glimmer.png");
+}
+
 .tech__html5 {
   background-image: url("../images/tech-html5.png");
 }
